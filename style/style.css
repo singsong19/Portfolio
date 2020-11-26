@@ -90,7 +90,7 @@ p{
 #navbar{
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-pink);
+    background-color: rgb(242, 97, 67);
     align-items: center;
     color: var(--color-white);
     padding: 16px;
@@ -152,6 +152,10 @@ section{
     margin: auto;
 }
 
+.section__container{
+    max-width: 1200px;
+}
+
 /* About */
 .about__majors{
     display: flex;
@@ -184,4 +188,50 @@ section{
 .major__title,
 .major__description{
     font-size: var(--font-small);
+}
+
+/* Skill */
+
+#skills{
+    background-color: rgb(19, 48, 85);
+}
+
+.skillset{
+    display: flex;
+    background-color: rgb(196, 196, 196);
+    color: var(--color-white);
+    margin: 20px 0;
+}
+
+.skillset__title{
+    color: white;
+}
+
+.skillset__left{
+    flex-basis: 60%;
+    padding: 20px 40px;
+    background-color: rgb(145, 145, 145);
+
+}
+
+.skill__description{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.skill {
+    margin-bottom: 8px;
+}
+
+.skill__bar{
+    height: 3px;
+    background-color: var(--color-pink);
+}
+
+.skillset__right{
+    flex-basis: 40%;
+}
+.tools{
+    background-color: #bdbdbd;
 }
