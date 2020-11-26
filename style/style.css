@@ -26,16 +26,21 @@
 
     /* Size */
     --size-border-radius: 4px;
+
+    /* Animation */
+    --animation-duration: 300ms;
 }
+
 
 /* Universal tags */
 *{
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 body{
     margin:0;
-    font-family: 'Times New Roman', Times, serif;
     cursor: default;
 }
 
@@ -43,6 +48,11 @@ a{
     text-decoration: none;
     color: var(--color-white);
 }
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
 button{
     background-color: transparent;
     cursor: pointer;
@@ -55,6 +65,7 @@ h1{
     font-size: var(--font-large);
     color: var(--color-black);
     margin: 16px 0px;
+    
 }
 h2{
     font-size: var(--font-regular);
@@ -76,7 +87,7 @@ p{
 }
 
 /* Navbar */
-#navbar {
+#navbar{
     display: flex;
     justify-content: space-between;
     background-color: var(--color-pink);
@@ -98,7 +109,7 @@ p{
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
-    background-color: var(--color-white);
+    
 }
 
 .navbar__menu__item.active{
@@ -106,13 +117,9 @@ p{
     border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item:hover{
-    background-color: var(--color-white);
-}
-
 /* Home */
 #home{
-    background: url();
+    background: url(../img/gradient-blue-linear-red-1920x1080-c2-00bfff-fa8072-a-0-f-14.svg);
     padding: 40px;
     text-align: center;
 }
@@ -136,4 +143,45 @@ p{
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+}
+
+section{
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* About */
+.about__majors{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major__icon{
+    width: 170px;
+    height: 170px;
+    background-color: rgb(86, 186, 183);
+    font-size: 70px;
+    line-height: 170px;
+    margin: auto;
+    border: 1px solid var(--color-blue);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.major__icon i{
+    transition: var(--animation-duration)
+}
+
+.major__icon:hover{
+    color: rgb(19, 48, 85);
+    transform: rotate(-30deg); 
+}
+
+.major__title,
+.major__description{
+    font-size: var(--font-small);
 }
