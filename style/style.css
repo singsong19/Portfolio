@@ -68,7 +68,7 @@ h1{
     
 }
 h2{
-    font-size: var(--font-regular);
+    font-size: var(--font-medium);
     font-weight: var(--font-regular);
     color: var(--color-black);
     margin: 8px 0;
@@ -112,7 +112,7 @@ p{
     
 }
 
-.navbar__menu__item.active{
+.navbar__menu__item:hover{
     border: 1px solid white;
     border-radius: var(--size-border-radius);
 }
@@ -122,6 +122,7 @@ p{
     background: url(../img/gradient-blue-linear-red-1920x1080-c2-00bfff-fa8072-a-0-f-14.svg);
     padding: 40px;
     text-align: center;
+    max-width: 100%;
 }
 
 .home__avatar {
@@ -256,7 +257,7 @@ section{
 
 .category__btn.active,
 .category__btn:hover{
-    background-color: var(--color-pink);
+    background-color: rgb(242, 97, 67);
     color: var(--color-white);
 }
 
@@ -267,7 +268,7 @@ section{
 }
 
 .category__count{
-    background-color: var(--color-orange);
+    background-color: rgb(86, 186, 183);
     color: var(--color-white);
     border-radius: 50%;
     height: 24px;
@@ -281,7 +282,7 @@ section{
     transition: all var(--animation-duration) ease-in;
 }
 
-.work_projects{
+.work__projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -305,6 +306,7 @@ section{
 
 .project__description{
     position: absolute;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -335,4 +337,60 @@ section{
     margin-top: 8px;
     margin-left: -12px;;
     background-color: var(--color-dark-white);
+}
+
+/* contact */
+#contact{
+    background-color: rgb(19, 48, 85);
+    max-width: 100%;
+}
+
+.contact__title,
+.contact__email,
+.contact__rights{
+    color: var(--color-white);
+}
+
+.contact__title{
+    margin: 32px 0;
+}
+
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+    transition: all var(--animation-duration) ease-in;
+}
+
+.contact__links i:hover{
+    transform: scale(1.1);
+    color: var(--color-yellow)
+}
+
+.navbar__toggle-btn{
+    position: absolute;
+    right: 38px;
+    top: 24px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;    
+}
+
+/* For below 768px screen width */
+/* 최소한의 정보/차이점만 미디어로 제어 */
+@media screen and (max-width: 768px){
+    .navbar__toggle-btn{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
 }
