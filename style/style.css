@@ -88,12 +88,22 @@ p{
 
 /* Navbar */
 #navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(242, 97, 67);
+    /* background-color: rgb(242, 97, 67); */
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
+}
+
+#navbar.navbar--dark{
+    background-color: var(--color-dark-pink);
+    padding: 8;
 }
 
 .navbar__menu{
@@ -123,6 +133,7 @@ p{
     padding: 40px;
     text-align: center;
     max-width: 100%;
+    padding-top: 120px;
 }
 
 .home__avatar {
