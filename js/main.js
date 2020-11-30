@@ -35,8 +35,7 @@ homeContactBtn.addEventListener('click', () => {
 //transparent home 
 const home  = document.querySelector('#home');
 const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', () => { //스크롤이 될 때마다 얼마만큼의 값을 가지는지
-   console.log(1 - window.scrollY / homeHeight); 
+document.addEventListener('scroll', () => { //스크롤이 될 때마다 얼마만큼의 값을 가지는지 
    home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
@@ -54,11 +53,42 @@ document.addEventListener('scroll', () => {
 //Handle click on the "arrow up" button
 arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
-})
+});
 
 
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null) {
+        return;
+    }
+    console.log(filter);
+    projects.forEach((project) => { 
+        console.log(project.dataset.type);
+        if(filter ==='*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+        } else {
+            project.classList.add('invisible');
+        }
+    });
+});
+//     for(let project of projects){
+//     } forEach랑 동일한 말
+
+//     let project;
+//     for(let i = 0; i < projects.length ; i++) {
+//         project = projects[i];
+//     } forEach랑 동일한 말
+// }
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
+
+
+
