@@ -65,7 +65,7 @@ workBtnContainer.addEventListener('click', (e) => {
     if(filter == null) {
         return;
     }
-    console.log(filter);
+    projectContainer.classList.add('anim-out')
     projects.forEach((project) => { 
         console.log(project.dataset.type);
         if(filter ==='*' || filter === project.dataset.type) {
@@ -74,6 +74,10 @@ workBtnContainer.addEventListener('click', (e) => {
             project.classList.add('invisible');
         }
     });
+
+    setTimeout(()=>{
+        projectContainer.classList.remove('anim-out')
+    }, 300) ;
 });
 //     for(let project of projects){
 //     } forEach랑 동일한 말
