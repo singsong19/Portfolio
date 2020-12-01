@@ -25,12 +25,17 @@ navbarMenu.addEventListener('click', (event) => {
     scrollIntoView(link)
 });
 
+//Navbar toggle button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn').
+navbarToggleBtn.addEventListener('click', ()=> {
+    navbarMenu.classList.toggle('open');
+})
+
 // Contact Me button scrolling
 const homeContactBtn = document.querySelector('.home__contact')
 homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 });
-
 
 //transparent home 
 const home  = document.querySelector('#home');
@@ -65,6 +70,13 @@ workBtnContainer.addEventListener('click', (e) => {
     if(filter == null) {
         return;
     }
+
+    //Remove selection from the previous item 
+    const active = document.querySelector('.category__btn.selected')
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    e.target.classList.add('selected')
+
     projectContainer.classList.add('anim-out')
     projects.forEach((project) => { 
         console.log(project.dataset.type);
@@ -87,6 +99,7 @@ workBtnContainer.addEventListener('click', (e) => {
 //         project = projects[i];
 //     } forEach랑 동일한 말
 // }
+
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
