@@ -129,7 +129,7 @@ p{
 
 /* Home */
 #home{
-    background: url(../img/gradient-blue-linear-red-1920x1080-c2-00bfff-fa8072-a-0-f-14.svg);
+    background: url(../img/bac3.JPG);
     padding: 40px;
     text-align: center;
     max-width: 100%;
@@ -156,6 +156,10 @@ p{
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover{
+    background-color: rgb(19, 48, 85);;
 }
 
 section{
@@ -285,7 +289,7 @@ section{
 
 .category__btn.selected,
 .category__btn:hover{
-    background-color: rgb(242, 97, 67);
+    background-color: rgb(19, 48, 85);
     color: var(--color-white);
 }
 
@@ -317,6 +321,13 @@ section{
     opacity: 1;
     transition: all var(--animation-duration) ease-in;
 }
+
+.work__projects img{
+    width: 280px;
+    height: 250px;
+}
+
+
 
 .work__projects.anim-out{
     opacity: 0.6;
@@ -420,7 +431,7 @@ section{
     bottom: 50px;
     right: 50px;
     font-size: 50px;
-    color: pink;
+    color: rgb(245, 206, 121);
     opacity: 0;
     pointer-events: none;
     transition: opacity 300ms ease-in;
@@ -440,7 +451,7 @@ section{
     #navbar{
         flex-direction: column;
         align-items: flex-start;
-        background-color: var(--color-pink);
+        background-color: #094543;
     }
     
     #navbar.navbar--dark{
