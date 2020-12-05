@@ -27,7 +27,7 @@ navbarMenu.addEventListener('click', (event) => {
 
 //Navbar toggle button
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
-navbarToggleBtn.addEventListener('click', ()=> {
+navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 });
 
