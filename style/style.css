@@ -254,6 +254,11 @@ section{
 
 }
 
+.skillset h3{
+    color: rgb(19, 48, 85);
+    font-weight: bold;
+}
+
 .skill__value {
     height: 3px;
     background-color: var(--color-orange);
